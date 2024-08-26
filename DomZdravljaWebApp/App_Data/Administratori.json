@@ -1,0 +1,22 @@
+[
+  {
+    "$id": "1",
+    "id": 1,
+    "korisnickoIme": "Admin1",
+    "sifra": "admin123",
+    "ime": "Ivan",
+    "prezime": "Ivic",
+    "role": 3,
+    "datumRodjenja": "1970-01-01T00:00:00"
+  },
+  {
+    "$id": "2",
+    "id": 2,
+    "korisnickoIme": "Admin2",
+    "sifra": "admin456",
+    "ime": "Ana",
+    "prezime": "Anic",
+    "role": 3,
+    "datumRodjenja": "1980-02-02T00:00:00"
+  }
+]

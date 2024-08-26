@@ -1,0 +1,63 @@
+﻿/* Navbar styles */
+.navbar {
+	background-color: #333;
+	padding: 10px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar h2 {
+	color: white;
+	margin: 0;
+}
+
+.navbar-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+	.navbar-menu li {
+		margin-left: 15px;
+	}
+
+	.navbar-menu a {
+		text-decoration: none;
+		color: white;
+		background-color: #4CAF50;
+		padding: 10px 15px;
+		border-radius: 4px;
+		font-size: 14px;
+		transition: background-color 0.3s ease;
+	}
+
+		.navbar-menu a:hover {
+			background-color: #45a049;
+		}
+
+	.navbar-menu .disabled {
+		background-color: #6c757d;
+		cursor: not-allowed;
+	}
+
+		.navbar-menu .disabled:hover {
+			background-color: #6c757d;
+		}
+
+/* Content padding to ensure it's not hidden under the navbar */
+.container {
+	margin-top: 60px; /* Adjust based on the height of your navbar */
+}

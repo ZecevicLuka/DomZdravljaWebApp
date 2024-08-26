@@ -1,0 +1,68 @@
+﻿@model DomZdravljaWebApp.Models.DTOs.PacijentDto
+
+@{
+    ViewBag.Title = "Kreiraj Pacijenta";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="pacijent-form-container">
+        <h2>@ViewBag.Title</h2>
+
+        @using (Html.BeginForm("Kreiraj", "Admin", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label for="JMBG">JMBG</label>
+                @Html.TextBoxFor(model => model.JMBG, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.JMBG, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Ime">Ime</label>
+                @Html.TextBoxFor(model => model.Ime, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Ime, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Prezime">Prezime</label>
+                @Html.TextBoxFor(model => model.Prezime, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Prezime, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="DatumRodjenja">Datum Rođenja</label>
+                @Html.TextBoxFor(model => model.DatumRodjenja, new { @class = "form-control", @type = "date", required = "required" })
+                @Html.ValidationMessageFor(model => model.DatumRodjenja, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="KorisnickoIme">Korisničko Ime</label>
+                @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.KorisnickoIme, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="Sifra">Šifra</label>
+                @Html.TextBoxFor(model => model.Sifra, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Sifra, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kreiraj Pacijenta</button>
+        }
+    </div>
+</body>
+</html>

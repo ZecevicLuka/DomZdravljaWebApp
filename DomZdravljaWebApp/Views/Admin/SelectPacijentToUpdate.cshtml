@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DomZdravljaWebApp.Models.Pacijent>
+
+@{
+    ViewBag.Title = "Azuriranje Pacijenta";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Table.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h2>@ViewBag.Title</h2>
+
+    @using (Html.BeginForm("SelectPacijentToUpdate", "Admin", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="JMBG">Unesite JMBG:</label>
+            <input type="text" name="jmbg" class="form-control" required />
+            <button type="submit" class="btn btn-primary">Pretraga</button>
+        </div>
+    }
+
+    <h3>Or select from the list below:</h3>
+    <table class="table-container">
+        <thead>
+            <tr>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>JMBG</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pacijent in Model)
+            {
+                <tr>
+                    <td>@pacijent.Ime</td>
+                    <td>@pacijent.Prezime</td>
+                    <td>@pacijent.JMBG</td>
+                    <td>@pacijent.Email</td>
+                    <td>
+                        @Html.ActionLink("Azuriraj", "Azuriraj", new { jmbg = pacijent.JMBG }, new { @class = "btn btn-primary" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

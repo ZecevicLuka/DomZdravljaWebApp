@@ -1,0 +1,408 @@
+[
+  {
+    "$id": "1",
+    "lekar": {
+      "$id": "2",
+      "email": "luka.zecevic@example.com",
+      "zakazaniSlobodniTermini": [
+        {
+          "$id": "3",
+          "lekar": {
+            "$ref": "2"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T10:30:00",
+          "opisTerapije": "Follow-up for test results"
+        },
+        {
+          "$id": "4",
+          "lekar": {
+            "$ref": "2"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T09:00:00",
+          "opisTerapije": "Initial consultation"
+        },
+        {
+          "$id": "5",
+          "lekar": {
+            "$ref": "2"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-16T11:00:00",
+          "opisTerapije": "Routine check-up"
+        },
+        {
+          "$id": "6",
+          "lekar": {
+            "$ref": "2"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-12T23:30:00",
+          "opisTerapije": "Terapija proba 2"
+        }
+      ],
+      "id": 1,
+      "korisnickoIme": "Lekar1",
+      "sifra": "lekar123",
+      "ime": "Luka",
+      "prezime": "Zecevic",
+      "role": 2,
+      "datumRodjenja": "1980-10-22T00:00:00"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-15T09:00:00",
+    "opisTerapije": "možda radi, ne vuče iz baze"
+  },
+  {
+    "$id": "7",
+    "lekar": {
+      "$id": "8",
+      "email": "luka.zecevic@example.com",
+      "zakazaniSlobodniTermini": [
+        {
+          "$id": "9",
+          "lekar": {
+            "$ref": "8"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T10:30:00",
+          "opisTerapije": "Follow-up for test results"
+        },
+        {
+          "$id": "10",
+          "lekar": {
+            "$ref": "8"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T09:00:00",
+          "opisTerapije": "Initial consultation"
+        },
+        {
+          "$id": "11",
+          "lekar": {
+            "$ref": "8"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-16T11:00:00",
+          "opisTerapije": "Routine check-up"
+        },
+        {
+          "$id": "12",
+          "lekar": {
+            "$ref": "8"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-12T23:30:00",
+          "opisTerapije": "Terapija proba 2"
+        }
+      ],
+      "id": 1,
+      "korisnickoIme": "Lekar1",
+      "sifra": "lekar123",
+      "ime": "Luka",
+      "prezime": "Zecevic",
+      "role": 2,
+      "datumRodjenja": "1980-10-22T00:00:00"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-15T10:30:00",
+    "opisTerapije": "Follow-up for test results"
+  },
+  {
+    "$id": "13",
+    "lekar": {
+      "$id": "14",
+      "email": "luka.zecevic@example.com",
+      "zakazaniSlobodniTermini": [
+        {
+          "$id": "15",
+          "lekar": {
+            "$ref": "14"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T10:30:00",
+          "opisTerapije": "Follow-up for test results"
+        },
+        {
+          "$id": "16",
+          "lekar": {
+            "$ref": "14"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T09:00:00",
+          "opisTerapije": "možda radi, ne vuče iz baze"
+        },
+        {
+          "$id": "17",
+          "lekar": {
+            "$ref": "14"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-16T11:00:00",
+          "opisTerapije": "u 11 prepiska"
+        },
+        {
+          "$id": "18",
+          "lekar": {
+            "$ref": "14"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-12T23:30:00",
+          "opisTerapije": "Terapija proba 2"
+        }
+      ],
+      "id": 1,
+      "korisnickoIme": "Lekar1",
+      "sifra": "lekar123",
+      "ime": "Luka",
+      "prezime": "Zecevic",
+      "role": 2,
+      "datumRodjenja": "1980-10-22T00:00:00"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-16T11:00:00",
+    "opisTerapije": "u 11 prepiska"
+  },
+  {
+    "$id": "19",
+    "lekar": {
+      "$id": "20",
+      "email": "marko.nikolic@example.com",
+      "zakazaniSlobodniTermini": [
+        {
+          "$id": "21",
+          "lekar": {
+            "$ref": "20"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-16T13:00:00",
+          "opisTerapije": "Consultation for treatment plan"
+        },
+        {
+          "$id": "22",
+          "lekar": {
+            "$ref": "20"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-17T09:30:00",
+          "opisTerapije": "Discussion of lab results"
+        },
+        {
+          "$id": "23",
+          "lekar": {
+            "$ref": "20"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-09-01T08:30:00",
+          "opisTerapije": "terapija 1. sep"
+        },
+        {
+          "$id": "24",
+          "lekar": {
+            "$ref": "20"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-19T14:45:00",
+          "opisTerapije": "terapija u 15 do 3"
+        }
+      ],
+      "id": 2,
+      "korisnickoIme": "Lekar2",
+      "sifra": "lekar456",
+      "ime": "Marko",
+      "prezime": "Nikolic",
+      "role": 2,
+      "datumRodjenja": "1975-05-15T00:00:00"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-16T13:00:00",
+    "opisTerapije": "Consultation for treatment plan"
+  },
+  {
+    "$id": "25",
+    "lekar": {
+      "$id": "26",
+      "email": "marko.nikolic@example.com",
+      "zakazaniSlobodniTermini": [
+        {
+          "$id": "27",
+          "lekar": {
+            "$ref": "26"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-16T13:00:00",
+          "opisTerapije": "Consultation for treatment plan"
+        },
+        {
+          "$id": "28",
+          "lekar": {
+            "$ref": "26"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-17T09:30:00",
+          "opisTerapije": "Discussion of lab results"
+        },
+        {
+          "$id": "29",
+          "lekar": {
+            "$ref": "26"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-09-01T08:30:00",
+          "opisTerapije": "terapija 1. sep"
+        },
+        {
+          "$id": "30",
+          "lekar": {
+            "$id": "31",
+            "email": "marko.nikolic@example.com",
+            "zakazaniSlobodniTermini": [
+              {
+                "$id": "32",
+                "lekar": {
+                  "$ref": "31"
+                },
+                "zakazanTermin": false,
+                "datumIVremeTermina": "2024-08-16T13:00:00",
+                "opisTerapije": "Consultation for treatment plan"
+              },
+              {
+                "$id": "33",
+                "lekar": {
+                  "$ref": "31"
+                },
+                "zakazanTermin": false,
+                "datumIVremeTermina": "2024-08-17T09:30:00",
+                "opisTerapije": "Discussion of lab results"
+              },
+              {
+                "$id": "34",
+                "lekar": {
+                  "$ref": "31"
+                },
+                "zakazanTermin": false,
+                "datumIVremeTermina": "2024-09-01T08:30:00",
+                "opisTerapije": "terapija 1. sep"
+              },
+              {
+                "$id": "35",
+                "lekar": {
+                  "$ref": "31"
+                },
+                "zakazanTermin": false,
+                "datumIVremeTermina": "2024-08-19T14:45:00",
+                "opisTerapije": "terapija u 15 do 3"
+              }
+            ],
+            "id": 2,
+            "korisnickoIme": "Lekar2",
+            "sifra": "lekar456",
+            "ime": "Marko",
+            "prezime": "Nikolic",
+            "role": 2,
+            "datumRodjenja": "1975-05-15T00:00:00"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-19T14:45:00",
+          "opisTerapije": "terapija u 15 do 3"
+        }
+      ],
+      "id": 2,
+      "korisnickoIme": "Lekar2",
+      "sifra": "lekar456",
+      "ime": "Marko",
+      "prezime": "Nikolic",
+      "role": 2,
+      "datumRodjenja": "1975-05-15T00:00:00"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-17T09:30:00",
+    "opisTerapije": "Discussion of lab results"
+  },
+  {
+    "$id": "36",
+    "lekar": {
+      "$ref": "14"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-12T23:30:00",
+    "opisTerapije": "Terapija proba 2"
+  },
+  {
+    "$id": "37",
+    "lekar": {
+      "$ref": "31"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-09-01T08:30:00",
+    "opisTerapije": "terapija 1. sep"
+  },
+  {
+    "$ref": "30"
+  },
+  {
+    "$id": "38",
+    "lekar": {
+      "$id": "39",
+      "email": "luka.zecevic@example.com",
+      "zakazaniSlobodniTermini": [
+        {
+          "$id": "40",
+          "lekar": {
+            "$ref": "39"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T10:30:00",
+          "opisTerapije": "Follow-up for test results"
+        },
+        {
+          "$id": "41",
+          "lekar": {
+            "$ref": "39"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-15T09:00:00",
+          "opisTerapije": "možda radi, ne vuče iz baze"
+        },
+        {
+          "$id": "42",
+          "lekar": {
+            "$ref": "39"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-16T11:00:00",
+          "opisTerapije": "u 11 prepiska"
+        },
+        {
+          "$id": "43",
+          "lekar": {
+            "$ref": "39"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-12T23:30:00",
+          "opisTerapije": "Terapija proba 2"
+        },
+        {
+          "$id": "44",
+          "lekar": {
+            "$ref": "39"
+          },
+          "zakazanTermin": false,
+          "datumIVremeTermina": "2024-08-18T00:20:00",
+          "opisTerapije": "proba pravjlenja termina"
+        }
+      ],
+      "id": 1,
+      "korisnickoIme": "Lekar1",
+      "sifra": "lekar123",
+      "ime": "Luka",
+      "prezime": "Zecevic",
+      "role": 2,
+      "datumRodjenja": "1980-10-22T00:00:00"
+    },
+    "zakazanTermin": false,
+    "datumIVremeTermina": "2024-08-18T00:20:00",
+    "opisTerapije": "proba pravjlenja termina"
+  }
+]

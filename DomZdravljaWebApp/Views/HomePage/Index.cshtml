@@ -1,0 +1,20 @@
+﻿@using DomZdravljaWebApp.Models
+
+@{
+    ViewBag.Title = "Home Page";
+
+    var osoba = ViewBag.Osoba as Osoba;
+    bool isPacijent = osoba?.Role == Role.Pacijent;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <p2>Dom Zdravlja</p2>
+</body>
+</html>

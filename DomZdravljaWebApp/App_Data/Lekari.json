@@ -1,0 +1,109 @@
+[
+  {
+    "$id": "1",
+    "email": "luka.zecevic@example.com",
+    "zakazaniSlobodniTermini": [
+      {
+        "$id": "2",
+        "lekar": {
+          "$ref": "1"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-15T10:30:00",
+        "opisTerapije": "Follow-up for test results"
+      },
+      {
+        "$id": "3",
+        "lekar": {
+          "$ref": "1"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-15T09:00:00",
+        "opisTerapije": "možda radi, ne vuče iz baze"
+      },
+      {
+        "$id": "4",
+        "lekar": {
+          "$ref": "1"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-16T11:00:00",
+        "opisTerapije": "u 11 prepiska"
+      },
+      {
+        "$id": "5",
+        "lekar": {
+          "$ref": "1"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-12T23:30:00",
+        "opisTerapije": "Terapija proba 2"
+      },
+      {
+        "$id": "6",
+        "lekar": {
+          "$ref": "1"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-18T00:20:00",
+        "opisTerapije": "proba pravjlenja termina"
+      }
+    ],
+    "id": 1,
+    "korisnickoIme": "Lekar1",
+    "sifra": "lekar123",
+    "ime": "Luka",
+    "prezime": "Zecevic",
+    "role": 2,
+    "datumRodjenja": "1980-10-22T00:00:00"
+  },
+  {
+    "$id": "7",
+    "email": "marko.nikolic@example.com",
+    "zakazaniSlobodniTermini": [
+      {
+        "$id": "8",
+        "lekar": {
+          "$ref": "7"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-16T13:00:00",
+        "opisTerapije": "Consultation for treatment plan"
+      },
+      {
+        "$id": "9",
+        "lekar": {
+          "$ref": "7"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-17T09:30:00",
+        "opisTerapije": "Discussion of lab results"
+      },
+      {
+        "$id": "10",
+        "lekar": {
+          "$ref": "7"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-09-01T08:30:00",
+        "opisTerapije": "terapija 1. sep"
+      },
+      {
+        "$id": "11",
+        "lekar": {
+          "$ref": "7"
+        },
+        "zakazanTermin": false,
+        "datumIVremeTermina": "2024-08-19T14:45:00",
+        "opisTerapije": "terapija u 15 do 3"
+      }
+    ],
+    "id": 2,
+    "korisnickoIme": "Lekar2",
+    "sifra": "lekar456",
+    "ime": "Marko",
+    "prezime": "Nikolic",
+    "role": 2,
+    "datumRodjenja": "1975-05-15T00:00:00"
+  }
+]

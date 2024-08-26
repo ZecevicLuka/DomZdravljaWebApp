@@ -1,0 +1,73 @@
+﻿@model DomZdravljaWebApp.Models.DTOs.TerapijaDto
+@using DomZdravljaWebApp.Models
+
+@{
+    ViewBag.Title = "Napravi Terapiju";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="terapija-form-container">
+        <h2>@ViewBag.Title</h2>
+
+        @using (Html.BeginForm("NapraviTerapiju", "Terapija", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <label for="PacijentId">Pacijent</label>
+                <select id="PacijentId" name="PacijentId" class="form-control" required>
+                    <option value="">Izaberite Pacijenta</option>
+                    @foreach (var pacijent in (IEnumerable<Pacijent>)ViewBag.Pacijenti)
+                    {
+                        <option value="@pacijent.Id">@pacijent.Ime @pacijent.Prezime</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="DatumIVremeTermina">Datum i Vreme Termina</label>
+                <select id="DatumIVremeTermina" name="DatumIVremeTermina" class="form-control" required>
+                    <option value="">Izaberite Termin</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Terapija">Terapija</label>
+                @Html.TextAreaFor(model => model.Terapija, new { @class = "form-control", @rows = 4, required = "required" })
+                @Html.ValidationMessageFor(model => model.Terapija, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-primary">Napravi Terapiju</button>
+        }
+    </div>
+
+    <script>
+    $(document).ready(function() {
+        $('#PacijentId').change(function() {
+            var pacijentId = $(this).val();
+            if (pacijentId) {
+                $.getJSON('@Url.Action("GetTermini", "Terapija")', { pacijentId: pacijentId }, function(data) {
+                    var $terminiDropdown = $('#DatumIVremeTermina');
+                    $terminiDropdown.empty();
+                    $terminiDropdown.append('<option value="">Izaberite Termin</option>');
+                    $.each(data, function(index, termin) {
+                        $terminiDropdown.append('<option value="' + termin.DatumIVremeTermina + '">' + termin.DatumIVremeTermina + '</option>');
+                    });
+                });
+            } else {
+                $('#DatumIVremeTermina').empty().append('<option value="">Izaberite Termin</option>');
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

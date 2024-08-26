@@ -1,0 +1,69 @@
+﻿@using DomZdravljaWebApp.Models
+
+@{
+    ViewBag.Title = "Prikaz Termina";
+    var osoba = ViewBag.Osoba as Osoba;
+    bool isPacijent = osoba?.Role == Role.Pacijent;
+    bool isLekar = osoba?.Role == Role.Lekar;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Table.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="table-wrapper">
+        @if (isPacijent) {
+        <table class="table-container">
+            <thead>
+                <tr>
+                    <th>Lekar</th>
+                    <th>Datum i Vreme</th>
+                    <th>Zakazan</th>
+                    <th>Opis Terapije</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var termin in ViewBag.Termini)
+                {
+                    <tr>
+                        <td>@(termin.Lekar != null ? termin.Lekar.Ime + " " + termin.Lekar.Prezime : "N/A")</td>
+                        <td>@termin.DatumIVremeTermina.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@(termin.ZakazanTermin ? "Da" : "Ne")</td>
+                        <td>@termin.OpisTerapije</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        }
+        else if(isLekar){
+        <table class="table-container">
+            <thead>
+                <tr>
+                    <th>Lekar</th>
+                    <th>Datum i Vreme</th>
+                    <th>Zakazan</th>
+                    <th>Opis Terapije</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var termin in ViewBag.Osoba.ZakazaniSlobodniTermini)
+                {
+                    <tr>
+                        <td>@(termin.Lekar != null ? termin.Lekar.Ime + " " + termin.Lekar.Prezime : "N/A")</td>
+                        <td>@termin.DatumIVremeTermina.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@(termin.ZakazanTermin ? "Da" : "Ne")</td>
+                        <td>@termin.OpisTerapije</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        }
+
+
+    </div>
+</body>
+</html>

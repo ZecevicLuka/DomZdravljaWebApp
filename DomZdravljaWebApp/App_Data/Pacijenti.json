@@ -1,0 +1,41 @@
+[
+  {
+    "$id": "1",
+    "jmbg": "1234567891234",
+    "email": "email@gmail.com",
+    "zakazaniTermini": [],
+    "id": 1,
+    "korisnickoIme": "Pacijent1",
+    "sifra": "pacijent123",
+    "ime": "Jelena",
+    "prezime": "Petrovic",
+    "role": 1,
+    "datumRodjenja": "1990-11-30T00:00:00"
+  },
+  {
+    "$id": "35",
+    "jmbg": "7896542315698",
+    "email": "email2@gmail.com",
+    "zakazaniTermini": [],
+    "id": 2,
+    "korisnickoIme": "Pacijent2",
+    "sifra": "pacijent456",
+    "ime": "MIle",
+    "prezime": "Milic",
+    "role": 1,
+    "datumRodjenja": "1985-05-05T00:00:00"
+  },
+  {
+    "$id": "42",
+    "jmbg": "1902002800044",
+    "email": "email3@gmail.com",
+    "zakazaniTermini": [],
+    "id": 3,
+    "korisnickoIme": "Pacijent3",
+    "sifra": "pacijent789",
+    "ime": "Balsa",
+    "prezime": "Zecevic",
+    "role": 1,
+    "datumRodjenja": "1995-05-05T00:00:00"
+  }
+]

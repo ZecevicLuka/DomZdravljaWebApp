@@ -1,0 +1,100 @@
+﻿@using DomZdravljaWebApp.Models
+
+@{
+    ViewBag.Title = "Prikaz Terapija";
+    var termini = ViewBag.Termini as Dictionary<Termin, Osoba>;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Table.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>@ViewBag.Title</h2>
+
+    <div class="filter-container">
+        <label for="filterInput">Pretraga:</label>
+        <input type="text" id="filterInput" class="form-control" placeholder="Unesite opis terapije...">
+    </div>
+
+    <div class="table-wrapper">
+        <table class="table-container">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Ime</th>
+                    <th onclick="sortTable(1)">Prezime</th>
+                    <th onclick="sortTable(2)">Datum i Vreme Termina</th>
+                    <th onclick="sortTable(3)">Opis Terapije</th>
+                </tr>
+            </thead>
+            <tbody id="terapijeTable">
+                @foreach (var kvp in termini)
+                {
+                    <tr>
+                        <td>@kvp.Value.Ime</td>
+                        <td>@kvp.Value.Prezime</td>
+                        <td>@kvp.Key.DatumIVremeTermina.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                        <td>@kvp.Key.OpisTerapije</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#filterInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#terapijeTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.querySelector(".table-container");
+            switching = true;
+            dir = "asc";
+
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                    if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

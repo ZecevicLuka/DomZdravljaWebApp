@@ -1,0 +1,42 @@
+﻿.table-wrapper {
+	padding: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow-x: auto;
+}
+
+
+.table-container {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	background-color: #f9f9f9;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+	.table-container th {
+		background-color: #4CAF50;
+		color: white;
+		padding: 12px 15px;
+		text-align: left;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+
+	.table-container td {
+		padding: 12px 15px;
+		border-bottom: 1px solid #ddd;
+		text-align: left;
+	}
+
+
+	.table-container tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+
+	.table-container tr:hover {
+		background-color: #e1e1e1;
+	}

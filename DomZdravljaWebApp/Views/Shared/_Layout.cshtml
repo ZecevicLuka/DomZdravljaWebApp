@@ -1,0 +1,56 @@
+﻿@using DomZdravljaWebApp.Models
+
+@{
+    var osoba = ViewBag.Osoba as Osoba;
+    var role = osoba?.Role;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Dom Zdravlja</title>
+    <link href="@Url.Content("~/Content/Nav.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h2>Welcome to Dom Zdravlja</h2>
+            <ul class="navbar-menu">
+                <li><a href="@Url.Action("Index", "Login")" class="btn btn-primary">Login</a></li>
+                @{
+                    switch (role)
+                    {
+                        case Role.Pacijent:
+                            <li><a href="@Url.Action("Zakazi", "Termin")" class="btn btn-primary">Zakazi Termin</a></li>
+                            <li><a href="@Url.Action("Prikazi", "Termin")" class="btn btn-primary">Prikazi Termine</a></li>
+                            <li><a href="@Url.Action("PrikaziTerapije", "Terapija")" class="btn btn-primary">Prikazi Terapije</a></li>
+                            break;
+                        case Role.Lekar:
+                            <li><a href="@Url.Action("Prikazi", "Termin")" class="btn btn-primary">Prikazi Termine</a></li>
+                            <li><a href="@Url.Action("Kreiraj", "Termin")" class="btn btn-primary">Kreiraj Termin</a></li>
+                            <li><a href="@Url.Action("NapraviTerapiju", "Terapija")" class="btn btn-primary">Kreiraj Terapiju</a></li>
+                            <li><a href="@Url.Action("PrikaziTerapije", "Terapija")" class="btn btn-primary">Prikazi Terapije</a></li>
+                            break;
+                        case Role.Administrator:
+                            <li><a href="@Url.Action("Kreiraj", "Admin")" class="btn btn-primary">Kreiraj Pacijenta</a></li>
+                            <li><a href="@Url.Action("SelectPacijentToUpdate", "Admin")" class="btn btn-primary">Azuriraj Pacijenta</a></li>
+                            <li><a href="@Url.Action("Obrisi", "Admin")" class="btn btn-primary">Obrisi Pacijenta</a></li>
+                            <li><a href="@Url.Action("Prikazi", "Admin")" class="btn btn-primary">Prikazi Pacijente</a></li>
+                            break;
+                        default:
+                            <li><a href="#" class="btn btn-primary disabled" aria-disabled="true">Prikazi Termine</a></li>
+                            <li><a href="#" class="btn btn-primary disabled" aria-disabled="true">Kreiraj Termin</a></li>
+                            <li><a href="#" class="btn btn-primary disabled" aria-disabled="true">Zakazi Termin</a></li>
+                            <li><a href="#" class="btn btn-primary disabled" aria-disabled="true">Prikazi Terapije</a></li>
+                            break;
+                    }
+                }
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
